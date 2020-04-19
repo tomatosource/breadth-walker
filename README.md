@@ -1,5 +1,12 @@
 # breadth-walker
 
+This is a tool to print directories walked in a BFS style from current location to standard out. 
+I use it in conjunction with [fzf](https://github.com/junegunn/fzf) to make a quick fuzzy directory navigator.
+
+```
+alias f='breadthwalker 5 | fzf | xargs -I @ sh -c '[ -d @ ] && cd @'
+```
+
 ## installation
 
 `go get https://github.com/tomatosource/breadth-walker`
